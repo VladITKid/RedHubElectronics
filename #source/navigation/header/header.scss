@@ -1,0 +1,232 @@
+.header {
+	grid-area: header;
+	grid-column: 1;
+	display: grid;
+	grid-template-columns: minmax($mobileSmall, $laptopLargeContent + $sidebarWidth);
+	justify-content: center;
+	grid-template-rows: auto auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: $white;
+	@media (max-width: $laptopLargeContent + $sidebarWidth + $scrollbarWidth) {
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	@media (max-width: $tablet) {
+		margin: 0;
+	}
+}
+
+// Верхний список шапки
+
+	.header__top-bar {
+		height: 40px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background: inherit;
+		color: $black;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+		.header__location {
+			display: flex;
+			align-items: center;
+			svg {
+				fill: $black;
+				margin-right: 4px;
+			}
+		}
+		.header__list {
+			display: inherit;
+			margin: 0 auto;
+		}
+			.header__link {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin: 0 20px;
+				color: $black;
+				font-weight: 500;
+				text-decoration: none;
+				background: linear-gradient($black, $black);
+				background-position: 0% 100%;
+				background-repeat: no-repeat;
+				background-size: 0% 2px;
+				transition: background-size .15s;
+				&:hover {
+					background-size: 100% 2px;
+				}
+			}
+		.header__telephone {
+			font-weight: 600;
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			grid-template-rows: 1fr;
+			grid-gap: 6px;
+			align-items: center;
+		}
+
+// Главная часть шапки
+
+	.header__main-bar {
+		height: 100px;
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: 1fr;
+		align-items: center;
+		grid-gap: 30px;
+		padding: 0 20px;
+		box-shadow: 0 0 10px 1px #00000020;
+		border-radius: 10px;
+		background: $white;
+		@media (max-width: $tablet) {
+			height: 160px;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto;
+			grid-gap: 0;
+			border-radius: 0;
+		}
+	}
+		// Логотип
+		.header__logo__wrap {
+			@media (max-width: $tablet) {
+				margin: 0 auto;
+			}
+		}
+			.header__logo {
+				height: 70px;
+			}
+
+// Форма поиска по сайту
+
+		.header__search {
+			height: 60px;
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			@media (max-width: $tablet) {
+				height: 52px;
+			}
+		}
+			// Поле для ввода
+			.header__search__input {
+				width: 100%;
+				height: 100%;
+				padding: 0 14px;
+				border: 2px solid $black;
+				border-right: none;
+				background: $white;
+				outline: none;
+				transition: box-shadow .2s;
+				border-bottom-left-radius: 10px;
+				border-top-left-radius: 10px;
+				&:focus {
+					position: absolute;
+					z-index: 6;
+					border-radius: 10px;
+					box-shadow: 0 0 0 1000vmax #00000068;
+				}
+				&:focus ~ .header__search__btn {
+					position: absolute;
+					z-index: 6;
+					right: 0;
+					width: 59px;
+				}
+			}
+			// Кнопка поиска
+			.header__search__btn {
+				width: 62px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: $black;
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+				border: none;
+				cursor: pointer;
+				transition: background .2s;
+				&:hover .header__search__btn__svg,
+				&:focus .header__search__btn__svg {
+					transform: scale(0.85);
+				}
+				@media (max-width: $tablet) {
+					width: 54px;
+				}
+				svg {
+					width: 22px;
+					height: 22px;
+					transition: transform .2s;
+					path {
+						fill: $white;
+					}
+				}
+			}
+
+// Кнопки с иконками
+
+		.header__btns {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			grid-template-rows: 1fr;
+			grid-gap: 20px;
+			@media (max-width: $tablet) {
+				position: fixed;
+				bottom: 0;
+				z-index: 5;
+				height: 100px;
+				padding: 30px 0;
+				background: $white;
+				box-shadow: inherit;
+				width: 100%;
+				margin: 0 -20px;
+			}
+		}
+			// Кнопка с иконкой
+			.header__btn {
+				color: $orangered;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				align-items: center;
+				font-weight: 500;
+				transition: color .2s;
+				&:hover {
+					color: $orange;
+					svg {
+						background: $orange;
+					}
+				}
+				svg {
+					fill: none;
+					width: 32px;
+					height: 32px;
+					background: $orangered;
+					border-radius: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 5px;
+					transition: background .2s;
+					&:nth-child(1) {
+						stroke: $white;
+					}
+				}
+			}
+				.header__btn__indicator {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: -7px;
+					margin-left: 40px;
+					font-size: .7em;
+					font-weight: 700;
+					color: $orangered;
+					border-radius: 50%;
+				}

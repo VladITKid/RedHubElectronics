@@ -1,0 +1,365 @@
+.sidebar {
+	grid-column: 1;
+	position: relative;
+	width: $sidebarWidth;
+	color: $black;
+	padding: 0 20px;
+	background: $white;
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+	.sidebar__title {
+		font-size: 1em;
+		font-weight: 600;
+		margin: 10px 0;
+	}
+	.sidebar__hr-line {
+		height: 0;
+		border: 1px solid #ddd;
+		border-left: none;
+		border-right: none;
+		padding: 0;
+		margin: 0;
+	}
+
+
+	// Чекбоксы и Радиокнопки
+
+	// Радиокнопки
+	.sidebar__custom-radio-btns {
+		margin-bottom: 10px;
+	}
+		.sidebar__custom-radio-btns__label {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-weight: 500;
+			user-select: none;
+			padding: 4px 0;
+			transition: color .14s;
+			cursor: pointer;
+			&:hover {
+				color: $orange;
+				.sidebar__custom-radio-btns__label__custom-radio-btn {
+					border-color: $orange;
+					box-shadow: 0 0 0 1px $orange;
+				}
+			}
+		}
+			.sidebar__custom-radio-btns__label__radio-btn {
+				position: absolute;
+				z-index: -100;
+				opacity: 0;
+				&:checked + .sidebar__custom-radio-btns__label__custom-radio-btn {
+					background: $orange;
+					border: 3px solid $white;
+					box-shadow: 0 0 0 2px $orange;
+				}
+			}
+			.sidebar__custom-radio-btns__label__custom-radio-btn {
+				width: 1em;
+				height: 1em;
+				margin-right: 1em;
+				background: $white;
+				border-radius: 100%;
+				border: 2px solid $black;
+				transition:
+					background .14s,
+					border .14s,
+					box-shadow .25s;
+			}
+
+
+	// Чекбоксы с галочками
+	.sidebar__custom-checkboxes {
+		margin-bottom: 10px;
+	}
+	.sidebar__custom-checkboxes__checkbox {
+		display: none !important;
+		&:checked + .sidebar__custom-checkboxes__label {
+			.sidebar__custom-checkboxes__label__custom-checkbox {
+				background: $orange;
+				border-color: $orange;
+				svg {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.sidebar__custom-checkboxes__label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-weight: 500;
+		padding: 4px 0;
+		cursor: pointer;
+		user-select: none;
+		transition: 
+			color .14s;
+		&:hover {
+			color: $orange;
+			.sidebar__custom-checkboxes__label__custom-checkbox {
+				border-color: $orange;
+				box-shadow: 0 0 0 1px $orange;
+			}
+		}
+	}
+		.sidebar__custom-checkboxes__label__custom-checkbox {
+			width: 1em;
+			height: 1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $white;
+			border: 2px solid $black;
+			border-radius: 4px;
+			margin-right: .8em;
+			transition: 
+				border-color .14s,
+				box-shadow .14s;
+			svg {
+				fill: $white;
+				width: .8em;
+				height: .8em;
+				opacity: 0;
+			}
+		}
+	// Чекбоксы со звёздами и категориями товаров
+	.sidebar__rating__checkbox,
+	.sidebar__product-type__checkbox,
+	.sidebar__vacancy-filters__checkbox {
+		display: none !important;
+		&:checked + .sidebar__label {
+			justify-content: left;
+			background: $black;
+			.sidebar__text {
+				color: $white;
+			}
+			.sidebar__label__close {
+				display: block;
+				right: 6px;
+			}
+		}
+	}
+	.sidebar__rating__checkbox,
+	.sidebar__product-type__checkbox,
+	.sidebar__vacancy-filters__checkbox {
+		&:checked + .sidebar__label {
+			color: $white;
+			&:hover {
+				border-color: $black;
+				box-shadow: 0 0 0 5px #0a233440;
+			}
+			.sidebar__label__tv,
+			.sidebar__label__pc {
+				fill: $orange;
+			}
+			.sidebar__label__tablet {
+				path {
+					stroke: $orange;
+				}
+			}
+			.sidebar__label__phones {
+				path {
+					&:nth-child(1) {
+						fill: $orange;
+					}
+					&:nth-child(3) {
+						stroke: $orange;
+					}
+				}
+				rect {
+					stroke: $orange;
+				}
+			}
+			.sidebar__label__accessories {
+				path {
+					stroke: $orange;
+				}
+			}
+			// From Workpage
+			.sidebar__label__webdevelopment {
+				path {
+					stroke: $orange;
+				}
+			}
+			.sidebar__label__creativity {
+				path,
+				circle {
+					stroke: $orange;
+				}
+			}
+			.sidebar__label__managemant {
+				path {
+					fill: $orange;
+				}
+			}
+		}
+	}
+	// Чекбоксы с типом продукта
+	.sidebar__product-type__label,
+	.sidebar__vacancy-filters__label {
+		user-select: none;
+		justify-content: left;
+	}
+		.sidebar__label__svg {
+			width: 22px;
+			height: 22px;
+			margin-right: 10px;
+		}
+		// SVG From Main sidebar
+		.sidebar__label__tablet {
+			path {
+				stroke: $black;
+			}
+		}
+		.sidebar__label__phones {
+			path {
+				&:nth-child(1) {
+					fill: $black;
+				}
+				&:nth-child(3) {
+					stroke: $black;
+				}
+			}
+			rect {
+				stroke: $black;
+			}
+		}
+		.sidebar__label__accessories {
+			path {
+				stroke: $black;
+			}
+		}
+		// From Workpage
+		.sidebar__label__webdevelopment {
+			path {
+				stroke: $black;
+			}
+		}
+		.sidebar__label__creativity {
+			path,
+			circle {
+				stroke: $black;
+			}
+		}
+		.sidebar__label__managemant {
+			path {
+				fill: $black;
+			}
+		}
+	.sidebar__rating__label {
+		justify-content: center;
+	}
+	.sidebar__label {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		padding: 6px 12px;
+		margin: 10px 0;
+		font-weight: 500;
+		background: $white;
+		border: 2px solid $black;
+		border-radius: 10px;
+		transition:
+			border-color .2s,
+			box-shadow .2s;
+		&:hover {
+			border-color: $orange;
+			box-shadow: 0 0 0 1px $orange;
+		}
+	}
+		.sidebar__label__star {
+			fill: $yellow;
+		}
+		.sidebar__label__star,
+		.sidebar__label__star-outline {
+			width: 20px;
+			height: 20px;
+			stroke: $orange;
+		}
+		.sidebar__text {
+			user-select: none;
+			font-size: .95em;
+			font-weight: 500;
+			margin: 0 0 0 6px;
+		}
+		.sidebar__label__close {
+			width: 24px;
+			height: 24px;
+			fill: $white;
+			position: absolute;
+			right: 0;
+			display: none;
+		}
+
+
+
+// Диапазон цен
+.sidebar__range-list {
+	margin-bottom: 14px;
+}
+	.sidebar__range {
+		$input: $sidebarWidth / 2 - 20px;
+		position: relative;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(2, $input);
+		grid-template-rows: repeat(2, 48px);
+		grid-gap: 6px;
+	}
+		.sidebar__range__currency {
+			display: flex;
+			margin: auto;
+			font-weight: 500;
+			font-size: 1.2em;
+			color: $black;
+			position: absolute;
+			top: 10px;
+			z-index: 1;
+		}
+		.sidebar__range__currency:nth-child(1) {
+			left: 6px;
+		}
+		.sidebar__range__currency:nth-child(3) {
+			left: 132px;
+		}
+		.sidebar__range__input {
+			width: $sidebarWidth / 2 - 20px;
+			background: $white;
+			padding-left: 24px;
+			color: $black;
+			font-weight: 500;
+			border: 2px solid $black;
+			border-radius: 10px;
+			outline: none;
+			transition: border-color .2s;
+			&:focus {
+				border-color: $orange;
+				box-shadow: 0 0 0 1px $orange;
+			}
+			transition:
+				border-color .2s,
+				box-shadow .2s;
+		}
+		.sidebar__range__btn {
+			grid-column: 1 / 3;
+			width: $sidebarWidth - 34px;
+			height: 48px;
+			color: $orangered;
+			font-weight: 700;
+			border-radius: 10px;
+			background: $yellow;
+			border: 3px solid $orangered;
+			box-shadow: 0 5px 0 0 $orangered;
+			cursor: pointer;
+			transition:
+				box-shadow .2s,
+				transform .2s;
+			&:hover {
+				box-shadow: 0 2px 0 0 $orangered;
+				transform: translateY(3px);
+			}
+		}

@@ -1,0 +1,86 @@
+<header class="header">
+<!--
+
+Список сверху шапки
+
+-->
+	<div class="header__top-bar">
+		<span class="header__location">
+			<svg width="16px" height="16px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path>
+			</svg>
+			New York
+		</span>
+		<ul class="header__list">
+			<li class="header__item">
+				<a href="" class="header__link">Sales</a>
+			</li>
+			<li class="header__item">
+				<a href="" class="header__link">Delivery</a>
+			</li>
+			<li class="header__item">
+				<a href="" class="header__link">Support</a>
+			</li>
+			<li class="header__item">
+				<a href="" class="header__link">About us</a>
+			</li>
+		</ul>
+		<span class="header__telephone">
+			<svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M9 16C2.814 9.813 3.11 5.134 5.94 3.012l.627-.467a1.483 1.483 0 0 1 2.1.353l1.579 2.272a1.5 1.5 0 0 1-.25 1.99L8.476 8.474c-.38.329-.566.828-.395 1.301.316.88 1.083 2.433 2.897 4.246 1.814 1.814 3.366 2.581 4.246 2.898.474.17.973-.015 1.302-.396l1.314-1.518a1.5 1.5 0 0 1 1.99-.25l2.276 1.58a1.48 1.48 0 0 1 .354 2.096l-.47.633C19.869 21.892 15.188 22.187 9 16z" fill="#0a2334"/>
+			</svg>
+			+0 (000) 000 00 00
+		</span>
+	</div>
+<!--
+
+Основная часть шапки
+
+-->
+	<div class="header__main-bar">
+		<!--
+			Логотип
+		-->
+		<a href="index.html" class="header__logo__wrap">
+			<img src="assets/images/png/logo.png" alt="RedHub Electronics" class="header__logo">
+		</a>
+		<!--
+			Форма для поиска по сайту
+		-->
+		<form class="header__search">
+			<input type="text" class="header__search__input" maxlength="90" placeholder="What are You looking for?">
+			<button type="submit" class="header__search__btn">
+				<svg width="24px" height="24px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+					<path  d="M1458.948 1305.626c104.637-136.95 167.527-307.187 167.527-492.388C1626.475 364.764 1261.711 0 813.238 0 364.764 0 0 364.764 0 813.238c0 448.473 364.764 813.237 813.238 813.237 185.201 0 355.547-62.89 492.496-167.527L1766.678 1920 1920 1766.678l-461.052-461.052Zm-645.71 103.986c-328.874 0-596.375-267.61-596.375-596.374 0-328.765 267.501-596.375 596.375-596.375 328.873 0 596.374 267.61 596.374 596.375s-267.501 596.374-596.374 596.374Z"/>
+				</svg>
+			</button>
+		</form>
+		<!--
+			Основные кнопки с иконками
+		-->
+		<div class="header__btns">
+			<a class="header__btn" href="">
+				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path class="header__btn__svg__path" d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				<span class="header__btn__indicator">10</span>
+				Cart
+			</a>
+			<a class="header__btn" href="">
+				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path class="header__btn__svg__path" d="M4.42602 12.9469L10.1622 19.1217C11.1546 20.1899 12.8454 20.1899 13.8378 19.1217L19.574 12.9469C21.4753 10.9002 21.4753 7.58179 19.574 5.53505C17.6726 3.48832 14.5899 3.48832 12.6885 5.53505V5.53505C12.3168 5.93527 11.6832 5.93527 11.3115 5.53505V5.53505C9.4101 3.48832 6.32738 3.48832 4.42602 5.53505C2.52466 7.58178 2.52466 10.9002 4.42602 12.9469Z" stroke-width="2"/>
+				</svg>
+				<span class="header__btn__indicator">3</span>
+				Favorite
+			</a>
+			<a class="header__btn" href="">
+				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path class="header__btn__svg__path" d="M4 18C4 15.7908 5.79086 14 8 14H16C18.2091 14 20 15.7908 20 18V18C20 19.1045 19.1046 20 18 20H6C4.89543 20 4 19.1045 4 18V18Z" stroke-width="2" stroke-linejoin="round"/>
+					<circle class="header__btn__svg__circle" cx="12" cy="6.99997" r="4" stroke-width="2"/>
+				</svg>
+				<span class="header__btn__indicator">1</span>
+				Profile
+			</a>
+		</div>
+	</div>
+</header>

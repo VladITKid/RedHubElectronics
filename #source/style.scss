@@ -1,0 +1,144 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "fonts.scss";
+body {
+	background: $white;
+	&::-webkit-scrollbar {
+		width: $scrollbarWidth;
+		background: $white;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #aaa;
+		border: 2px solid $white;
+		border-radius: 20px;
+	}
+}
+// Navigation
+@import "navigation/header/header.scss"; //Header
+@import "navigation/sidebar/sidebar.scss"; //Sidebar
+@import "navigation/footer/footer.scss"; //Footer
+@import "navigation/support-widget/support-widget.scss"; //Support widget
+// Pages
+@import "product-page.scss"; // Product page
+// Grid template of pages
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: minmax($mobileSmall, $laptopLargeContent + $sidebarWidth);
+	justify-content: center;
+	grid-template-rows: minmax($headerHeight, auto) 1fr minmax($footerHeight, auto);
+	grid-template-areas: 
+		"header"
+		"main"
+		"footer";
+	@media (max-width: $tablet) {
+		grid-template-rows: minmax($headerMobileHeight, auto) 1fr minmax($footerHeight, auto);
+	}
+}
+// Content of the website
+@mixin main {
+	grid-area: main;
+	margin: 0 auto;
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr;
+	@media (max-width: $tablet) {
+		grid-template-columns: minmax($mobileSmall, $laptopLargeContent);
+	}
+}
+.main {
+	@include main;
+}
+.homepage__main,
+.workpage__main {
+	@include main;
+	grid-template-columns: $sidebarWidth minmax($mobileSmall, $laptopLargeContent);
+}
+.cart__main,
+.favorite__main,
+.profile__main {
+	@include main;
+	grid-template-columns: 1fr;
+}
+.product-page__main {
+	@include main;
+	display: grid;
+	grid-template-columns: 480px 2fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 10px;
+	padding-top: 2em;
+	@media (max-width: 1122px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+	.content {
+		grid-column: 2;
+		position: relative;
+		@media (max-width: $tablet) {
+			grid-column: 1;
+		}
+	}
+		.content__title__wrap {
+			background: linear-gradient(45deg,
+				$black 3%,
+				$yellow 3% 6%,
+				$orangered 6% 9%,
+				$yellow 9% 12%,
+				$black 12% 15%,
+				$yellow 15% 18%,
+				$orangered 18% 21%,
+				$yellow 21% 24%,
+				$black 24% 27%,
+				$yellow 27% 73%,
+				// Place for title
+				$black 73% 76%,
+				$yellow 76% 79%,
+				$orangered 79% 82%,
+				$yellow 82% 85%,
+				$black 85% 88%,
+				$yellow 88% 91%,
+				$orangered 91% 94%,
+				$yellow 94% 97%,
+				$black 97% 100%,
+				$yellow 100%
+			);
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-top: 2px;
+			padding: 10px 0;
+			border: 4px solid $black;
+			border-radius: 6px;
+			border-top-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+			box-shadow: 0 4px 0 0 $black;
+			margin-bottom: 6px;
+			@media (max-width: 868px) {
+				background: $yellow;
+			}
+		}
+		.content__title {
+			font-size: 1.3em;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: $yellow;
+			background: $black;
+			margin-bottom: 4px;
+			padding: 14px 26px;
+			border: 3px solid $orangered;
+			border-radius: 18px;
+			border-top-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+			box-shadow: 0 2px 0 0 $orangered;
+		}
+			.content__title__word {
+				color: $orangered;
+				background: $yellow;
+				border-radius: 6px;
+				padding: 4px 10px;
+				border: 2px solid $orangered;
+				box-shadow: 0 2px 0 0 $orangered;
+				margin-left: 2px;
+			}
+@import "cards/cards.scss";

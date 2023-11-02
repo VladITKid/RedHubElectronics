@@ -1,0 +1,33 @@
+.support-widget {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 3;
+	background: #1390ff;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	animation: supportWidgetAnimation 1.8s infinite;
+	@keyframes supportWidgetAnimation {
+		0% {
+			box-shadow: 0 0 0 6px #1390ff40;
+		}
+		50% {
+			box-shadow: 0 0 0 10px #1390ff70;
+		}
+		100% {
+			box-shadow: 0 0 0 6px #1390ff40;
+		}
+	}
+}
+	.support-widget__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: inherit;
+		height: inherit;
+	}
+		.support-widget__link__svg {
+			width: 40px;
+			height: 40px;
+		}
