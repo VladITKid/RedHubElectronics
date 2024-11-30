@@ -12,12 +12,7 @@ The first multipage marketplace I designed and implemented myself. Creating it m
 - Workpage;
 - MacBook Air M2 15" page (+4 additional pages with different product colours).
 
-#### Homepage
-![redhub-page (1)](https://github.com/user-attachments/assets/c3a04bae-69e4-4d78-a0ec-1c390d1d7d27)
-#### Workpage
-![redhub-page (3)](https://github.com/user-attachments/assets/08b1559a-a604-48f5-9691-805a4d6d1a13)
-#### MacBook Air M2 15" page
-![redhub-page (2)](https://github.com/user-attachments/assets/62dd6792-1060-4b74-99b2-96d54a509122)
+![Без названия482_20241130150440](https://github.com/user-attachments/assets/f15a7cb4-0e95-41fc-95b6-48d36056fd3a)
 
 ## Links
 - Demo — https://vladitkid.github.io/RedHubElectronics/
