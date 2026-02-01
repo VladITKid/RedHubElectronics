@@ -1,5 +1,7 @@
 <img width="1920" height="991" alt="chrome_0iJr59tfqy" src="https://github.com/user-attachments/assets/63ef9c47-dc45-4044-ac8a-046cfaa55edb" />
+
 # RedHub Electronics
+
 Тип макета: #Marketplace | Сложность макета: #средняя | Язык макета: #ENG | Адаптив: Есть
 
 # Showcases
