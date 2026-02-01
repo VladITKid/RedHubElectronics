@@ -6,9 +6,9 @@
 
 # Showcases
 ## Desktop (1st Page)
-https://github.com/user-attachments/assets/d01678ff-55bf-46bc-a161-71602c7efe5e
-## Desktop (2nd Page)
 https://github.com/user-attachments/assets/d9deab60-6701-4339-b59e-2b10a1a41d20
+## Desktop (2nd Page)
+https://github.com/user-attachments/assets/d01678ff-55bf-46bc-a161-71602c7efe5e
 ## Desktop (3rd Page)
 https://github.com/user-attachments/assets/92cce7c2-3f3e-4fe1-9725-378d5106397c
 ## Tablet (All)
